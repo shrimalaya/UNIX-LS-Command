@@ -1,0 +1,74 @@
+// CMPT 300 Assignment 4
+// Srimalaya Ladha
+// 301367941
+// LADHA@sfu.ca
+
+SAMPLE OUTPUT: (Run as given in sample)
+
+ladha@csil-cpu2:~/sfuhome$ ./UnixLS
+main.c
+makefile
+Part1.txt
+Sample output.txt
+UnixLs.c
+UnixLs.h
+main.o
+UnixLs
+ladha@csil-cpu2:~/sfuhome$ ./UnixLs -l ../CMPT300_A1
+-rwxr-xr-x 1 ladha    domain users 17352  Feb 22 14:56 testDriver
+-rwxr-xr-x 1 ladha    domain users 12566  Jan 31 14:22 List.c
+-rwxr-xr-x 1 ladha    domain users 37     Jan 31 14:21 makefile
+-rwxr-xr-x 1 ladha    domain users 3651   Jan 31 14:22 List.h
+-rwxr-xr-x 1 ladha    domain users 3913   Jan 31 14:15 main.c
+ladha@csil-cpu2:~/sfuhome$ ./UnixLs -i ../CMPT300_A1
+4498070376710575475 testDriver
+4498070381005542772 List.c
+4498070389595477365 makefile
+4498070393890444662 List.h
+4498070402480379255 main.c
+ladha@csil-cpu2:~/sfuhome$ ./UnixLs -li
+416326319821050899 -rwxr-xr-x 1 ladha    domain users 1935   Apr 13 21:51 main.c
+416327900369015828 -rwxr-xr-x 1 ladha    domain users 112    Apr 13 21:08 makefile
+416328712117834773 -rwxr-xr-x 1 ladha    domain users 1958   Apr 13 22:18 Part1.txt
+416302061845763088 -rwxr-xr-x 1 ladha    domain users 74     Apr 13 22:19 Sample output.txt
+416302079025632273 -rwxr-xr-x 1 ladha    domain users 5943   Apr 13 21:44 UnixLs.c
+416302096205501458 -rwxr-xr-x 1 ladha    domain users 1350   Apr 13 21:48 UnixLs.h
+416358317327406102 -rwxr-xr-x 1 ladha    domain users 8576   Apr 13 22:24 main.o
+416358338802242583 -rwxr-xr-x 1 ladha    domain users 13488  Apr 13 22:24 UnixLs
+ladha@csil-cpu2:~/sfuhome$ ./UnixLs ~
+sfuhome
+Desktop
+Downloads
+Templates
+Public
+Documents
+Music
+Pictures
+Videos
+Inspector.txt
+IdeaProjects
+Restaurant.txt
+RestaurantEmployee.txt
+Android
+VirtualBox VMs
+InspectionByDate.txt
+Trainee.txt
+ladha@csil-cpu2:~/sfuhome$ ./UnixLs -li ~
+5348857540672620541 drwxr-xr-x 2 ladha    domain users 0      Apr 13 22:24 sfuhome
+11279617052 drwxr-xr-x 3 ladha    domain users 4096   Sep 24 10:25 Desktop
+11812410228 drwxr-xr-x 4 ladha    domain users 4096   Oct 08 16:20 Downloads
+12349916861 drwxr-xr-x 2 ladha    domain users 10     Jan 07 10:43 Templates
+12888314304 drwxr-xr-x 2 ladha    domain users 10     Jan 07 10:43 Public
+13423660691 drwxr-xr-x 2 ladha    domain users 10     Jan 07 10:43 Documents
+13960480930 drwxr-xr-x 2 ladha    domain users 10     Jan 07 10:43 Music
+14501921744 drwxr-xr-x 2 ladha    domain users 4096   Feb 06 13:28 Pictures
+15033223866 drwxr-xr-x 2 ladha    domain users 10     Jan 07 10:43 Videos
+8624038423 -rwxr-xr-x 1 ladha    domain users 818    Nov 12 19:50 Inspector.txt
+11294394862 drwxr-xr-x 4 ladha    domain users 58     Jan 24 13:30 IdeaProjects
+8623675962 -rwxr-xr-x 1 ladha    domain users 628    Nov 12 20:05 Restaurant.txt
+8631777173 -rwxr-xr-x 1 ladha    domain users 1679   Nov 12 20:06 RestaurantEmployee.txt
+8592047844 -rwxrwxrwx 1 ladha    domain users 38     Sep 06 21:16 Android -> /usr/shared/CMPT/scratch/ladha/Android
+8593517860 -rwxrwxrwx 1 ladha    domain users 41     Sep 06 21:16 VirtualBox VMs -> /usr/shared/CMPT/scratch/ladha/VirtualBox
+8623675938 -rwxr-xr-x 1 ladha    domain users 1615   Nov 12 20:06 InspectionByDate.txt
+8631774352 -rwxr-xr-x 1 ladha    domain users 1202   Nov 12 20:05 Trainee.txt
+ladha@csil-cpu2:~/sfuhome$ 

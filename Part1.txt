@@ -1,0 +1,38 @@
+// CMPT 300 Assignment 4
+// Srimalaya Ladha
+// 301367941
+// LADHA@sfu.ca
+
+1. A certain computer provides its users with a virtual-memory space of 232 bytes. The
+computer has 218 bytes of physical memory. The virtual memory is implemented by
+paging, and the page size is 4096 bytes. A user process generates the virtual address
+11123456 (this is in hexadecimal (base 16)). Explain how the system establishes the
+corresponding physical location. Distinguish between software and hardware
+operations. Feel free to use a diagram (simple ASCII is fine) if you wish, but that’s
+not required. 
+
+ANS: Virtual memory address in binary form: 0001 0001 0001 0010 0011 0100 0101 0110
+Since 4096 bytes = 2^12 = page size, therefore, page table size = 2^20. So the least significant 12 bits (0100 0101 0110) are used as displacement in page and the other 20 (0001 0001 0001 0010 0011) are used as displacement in page table.
+
+Depending on the memory access time, the page table held in registers and the frequency of page faults, the system carries out its hardware services. All the DAT operations are done by hardware whereas the services for page faults are done by software.
+
+
+
+2. Assume we have a demand-paged memory. The page table is held in registers. It takes
+8 milliseconds to service a page fault if an empty page is available or if the replaced 
+page is not modified, but 20 milliseconds if the replaced page was modified. Memory
+access time is 100 nanoseconds.
+Assume that the page to be replaced is modified 70% of the time. What is the
+maximum acceptable page-fault rate for an effective access time of no more than 200
+nanoseconds? Show your work. 
+
+ANS: Let rate be the page fault rate. (In probability)
+Then P(a memory access costs 100 ns) = 1 - rate
+P(page fault costs 20 ms) = 0.7*rate
+P(page fault costs 8 ms) = 0.3*rate
+
+So,
+(1-rate)*(100) + (0.7*rate)*(20000000) + (0.3*rate)*(8000000) <= 200 ns
+ 
+=> (16399900)*rate = 100
+=> rate = 6.097 * 10^-6
